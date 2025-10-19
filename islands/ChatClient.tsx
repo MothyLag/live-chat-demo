@@ -11,7 +11,7 @@ export default function ChatClient(){
   const [messages,setMessages] = useState<Message[]>([]);
   const [idUser,setIdUser] = useState<string>(null);
   const [input, setInput] = useState("");
-  const ws = new WebSocket("ws://localhost:8000/ws");
+  const ws = new WebSocket("ws://live-chat-demo.mothylag.deno.net/ws");
   const [_isLoading,setIsLoading] = useState(false);
   const {createUser} = UseAPI(setIsLoading)
   useEffect(()=>{
